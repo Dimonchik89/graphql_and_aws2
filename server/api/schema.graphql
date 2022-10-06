@@ -1,0 +1,24 @@
+scalar Upload
+
+type FileUploadResponse {
+    ETag: String!
+    Location: String!
+    key: String!
+    Key: String!
+    Bucket: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+    photo: String!
+}
+
+type Query {
+    getUsers: [User]
+    getMessate: String!
+}
+
+type Mutation {
+    fileUpload(file: Upload!): FileUploadResponse!
+}
